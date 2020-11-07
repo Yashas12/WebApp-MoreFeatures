@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time weather web application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="parent-container d-flex">
+        <div class="container my-5">
+            <div class="card-rounded my-3 shadow-lg d-none wind-card">
+                    <div class="wind-card-top text-center">
+                        <div class="wind-title my-3">
+                            <p>Wind</p>
+                        </div>
+                        <a href="windInfo.html"> <img src="img/wind.jpg" alt="">  </a>
+                    </div>
+                    <div class="wind-card-body">
+                        <div class="wind-condition row">
+                            <div class="col text-center wind-speed">
+                                <p> <img src="img/anemometer.svg" alt="" class="img5"> Speed: 30m/s</p>
+                            </div>
+                            <div class="col text-center wind-degree">
+                                <p> <img src="img/compass.svg" alt="" class="img6"> Degree: 230&deg;</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container my-5">
+            <h1 class="text-center title">Weather In</h1>
+            <form class="search-location">
+                <input 
+                    type="text" 
+                    name="city" 
+                    placeholder="Which City?"
+                    autocomplete="off"
+                    class="text form-control text-muted form-rounded p-4 shadow-sm"/>
+            </form>
+    
+            <div class="card rounded my-3 shadow-lg back-card">
+    
+                <div class="card-top text-center">
+                    <div class="city-name my-3">
+                        <p>City goes here</p>
+                        <span>...</span>
+                    </div>
+                    <a href="about.html"> <img src="img/night_image.svg" alt="" class="card-img-top time"/> </a>
+                </div>
+                <div class="card-body">
+    
+                    <div class="card-mid row">
+                        <div class="col-8 text-center temp">
+                            <span>&deg;C</span>
+                        </div>
+                        <div class="col-4 condition-temp">
+                            <p class="condition"></p>
+                            <p class="high">&deg;C</p>
+                            <p class="low">&deg;C</p>
+                        </div>
+                    </div>
+    
+                    <div class="icon-container card shadow mx-auto">
+                        <img src="img/cloud.svg" alt=""/>
+                    </div>
+                    <div class="card-bottom px-5 py-4 row">
+                        <div class="col text-center">
+                            <p>&deg;C</p>
+                            <span>Feels like</span>
+                        </div>
+                        <div class="col text-center">
+                            <p>%</p>
+                            <span>Humidity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container my-5">
+            <div class="card-rounded my-3 shadow-lg d-none loc-card">
+                <div class="loc-card-top text-center">
+                    <div class="loc-title my-3">
+                        <p>Location</p>
+                    </div>
+                    <img src="img/coord.jpg" alt="" class="img2">
+                </div>
+                <div class="loc-card-body">
+                    <div class="loc-condition row">
+                        <div class="col lat-long text-center">
+                            <p class="lat"> <a href="https://www.google.co.in/maps/place/12%C2%B018'36.0%22N+76%C2%B039'00.0%22E/@12.31,76.6478113,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d12.31!4d76.65"><img src="img/placeholder.svg" alt="" class="img3"/></a> Latitude: </p>
+                            <p class="long"> <a href="https://www.google.co.in/maps/place/12%C2%B018'36.0%22N+76%C2%B039'00.0%22E/@12.31,76.6478113,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d12.31!4d76.65"><img src="img/placeholder.svg" alt="" class="img3"/></a> Longitude: </p>
+                        </div>
+                        <div class="col text-center visibility">
+                            <p class="visib"> <img src="img/eye.svg" alt="" class="img4"> Visibility: KM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="request.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
